@@ -1,13 +1,13 @@
 html,
 body {
-  height: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Roboto",
-    sans-serif;
+  font-family: var(--ff-primary);
   font-weight: 400;
   font-style: normal;
   font-size: 19px;
@@ -21,7 +21,6 @@ body {
     overflow-y: hidden;
   }
 }
-
 
 .wrapper {
   position: relative;
@@ -60,4 +59,32 @@ main {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    background-color: currentColor;
+  }
+}
+
+.icon-location {
+  &::before {
+    mask-image: var(--icon-location);
+  }
+}
+
+.icon-fb {
+  &::before {
+    mask-image: var(--icon-fb);
+  }
 }

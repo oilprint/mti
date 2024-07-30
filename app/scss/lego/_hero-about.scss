@@ -1,0 +1,26 @@
+@import "./global/mixins";
+
+
+.section {}
+
+.about {}
+
+.container {}
+
+.about__content {
+  @include bg-image;
+}
+
+.title-box {}
+
+.title-box__title {}
+
+.about__title {
+  color: red;
+}
+
+.title-box__decor {}
+
+.about__info {}
+
+.decor {}

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UX/UI Designer Iryna Kozlova</title>
+  <title>MTI</title>
 
   @@include('../components/fonts.html')
 
@@ -15,18 +15,19 @@
 </head>
 
 <body>
+  <div class="wrapper">
+    @@include('../components/header.html', {
+    "home": "current"
+    })
 
+    <main>
+      @@include('../components/hero-home.html')
+      @@include('../components/hero-about.html')
+    </main>
 
-  @@include('../components/header.html', {
-  "home": "current"
-  })
+    @@include('../components/footer.html')
 
-  <main>
-    @@include('../components/hero-home.html')
-  </main>
-
-  @@include('../components/footer.html')
-
+  </div>
 
   <script src="js/main.min.js"></script>
 </body>
